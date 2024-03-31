@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/dnsmanager', {
+mongoose.connect('mongodb+srv://naseemabdulla07:lQluMDKap1vcpL44@cluster0.dcfmvss.mongodb.net/domain?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -27,3 +27,5 @@ app.use('/api/domains', domainRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
